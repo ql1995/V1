@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/template-web.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+    </div>
+    <script type="text/html" id="tpl">
+        <span>姓名：{{@name}}</span>
+        <span>年龄：{{age}}</span>
+    </script>
+    <script>
+        var data = {
+            name: '<b>张三</b>',
+            age: 20
+        }
+        var html = template('tpl', data);
+        var container = document.getElementsByClassName('container')[0];
+        console.log(container);
+        container.innerHTML = html;
+    </script>
+</body>
+
+</html>
